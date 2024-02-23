@@ -13,7 +13,7 @@
     var titleText = (config.language && config.language.indexOf('zh') >= 0) ? '文章日历' : 'Post Calendar';
 
     // calculate range.
-    var startDate = moment().subtract(1, 'years');
+    var startDate = moment().subtract(11, 'months');
     var endDate = moment();
     var rangeArr = '["' + startDate.format('YYYY-MM-DD') + '", "' + endDate.format('YYYY-MM-DD') + '"]';
 
@@ -109,4 +109,5 @@
     };
 
     myChart.setOption(option);
+    window.addEventListener('resize', myChart.resize);
 </script>
